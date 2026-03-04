@@ -1,0 +1,48 @@
+{
+  "name": "reaper-daw",
+  "displayName": "Reaper DAW",
+  "version": "1.0.0",
+  "description": "Music production and mixing tools for Reaper DAW with Linux system integration",
+  "keywords": ["reaper", "daw", "music", "audio", "mixing", "mastering", "production", "tracks", "fx", "effects", "eq", "compressor", "limiter"],
+  "mcp": {
+    "reaper": {
+      "command": "python",
+      "args": ["/home/hector/Projects/reaper-mcp/reaper_mcp_server.py"],
+      "disabled": false,
+      "env": {
+        "REAPER_BRIDGE_DIR": "/home/hector/.config/REAPER/Scripts/mcp_bridge_data/"
+      },
+      "autoApprove": [
+        "get_track",
+        "track_fx_add_by_name",
+        "track_fx_get_list",
+        "track_fx_get_num_params",
+        "track_fx_get_param_name",
+        "track_fx_get_param",
+        "save_project",
+        "add_eq",
+        "insert_track",
+        "get_track_count",
+        "get_all_tracks",
+        "set_track_name",
+        "create_send",
+        "set_send_volume",
+        "set_track_pan",
+        "add_compressor",
+        "set_track_volume",
+        "track_fx_delete",
+        "add_limiter",
+        "create_bus",
+        "track_fx_set_param"
+      ]
+    },
+    "linux-mcp-server": {
+      "command": "/home/hector/.local/bin/linux-mcp-server",
+      "args": [],
+      "disabled": false,
+      "env": {
+        "LINUX_MCP_USER": "hector"
+      }
+    }
+  }
+}
