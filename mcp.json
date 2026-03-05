@@ -1,10 +1,5 @@
 {
-  "name": "reaper-daw",
-  "displayName": "Reaper DAW",
-  "version": "1.0.0",
-  "description": "Music production and mixing tools for Reaper DAW with Linux system integration",
-  "keywords": ["reaper", "daw", "music", "audio", "mixing", "mastering", "production", "tracks", "fx", "effects", "eq", "compressor", "limiter"],
-  "mcp": {
+  "mcpServers": {
     "reaper": {
       "command": "python",
       "args": ["/home/hector/Projects/reaper-mcp/reaper_mcp_server.py"],

@@ -1,6 +1,5 @@
 ---
-inclusion: auto
-fileMatchPattern: "{requirements,design,tasks}.md"
+inclusion: always
 ---
 
 # Reaper DAW Spec Task Guidelines
