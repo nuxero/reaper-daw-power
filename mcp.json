@@ -30,14 +30,6 @@
         "create_bus",
         "track_fx_set_param"
       ]
-    },
-    "linux-mcp-server": {
-      "command": "/home/hector/.local/bin/linux-mcp-server",
-      "args": [],
-      "disabled": false,
-      "env": {
-        "LINUX_MCP_USER": "hector"
-      }
     }
   }
 }
