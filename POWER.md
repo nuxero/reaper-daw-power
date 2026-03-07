@@ -21,11 +21,11 @@ Before using Reaper MCP tools, ensure the following:
   - **CRITICAL**: If Reaper is not running, DO NOT proceed with MCP tool calls
   
 - **MCP Bridge Script**: The Reaper MCP bridge must be active
-  - Bridge data directory: `/home/hector/.config/REAPER/Scripts/mcp_bridge_data/`
+  - Bridge data directory: `~/.config/REAPER/Scripts/mcp_bridge_data/`
   - Verify the bridge is responding before complex operations
   
 - **Python Environment**: The MCP server requires Python
-  - Server location: `/home/hector/Projects/reaper-mcp/reaper_mcp_server.py`
+  - Server location: `~/Projects/reaper-mcp/reaper_mcp_server.py`
 
 ### Step 2: Understanding the Workflow
 
@@ -205,6 +205,6 @@ Use these names with `track_fx_add_by_name`:
 
 ### Prerequisites
 - Reaper must be running with the MCP bridge script active
-- Bridge script location: `/home/hector/.config/REAPER/Scripts/reaper_mcp_bridge.lua`
-- Bridge data directory: `/home/hector/.config/REAPER/Scripts/mcp_bridge_data/`
-- Python MCP server: `/home/hector/Projects/reaper-mcp/reaper_mcp_server.py`
+- Bridge script location: `~/.config/REAPER/Scripts/reaper_mcp_bridge.lua`
+- Bridge data directory: `~/.config/REAPER/Scripts/mcp_bridge_data/`
+- Python MCP server: `~/Projects/reaper-mcp/reaper_mcp_server.py`
