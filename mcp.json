@@ -2,10 +2,10 @@
   "mcpServers": {
     "reaper": {
       "command": "python",
-      "args": ["~/Projects/reaper-mcp/reaper_mcp_server.py"],
+      "args": ["Projects/reaper-mcp/reaper_mcp_server.py"],
       "disabled": false,
       "env": {
-        "REAPER_BRIDGE_DIR": "~/.config/REAPER/Scripts/mcp_bridge_data/"
+        "REAPER_BRIDGE_DIR": ".config/REAPER/Scripts/mcp_bridge_data/"
       }
     }
   }
