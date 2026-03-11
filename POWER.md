@@ -1,7 +1,7 @@
 ---
 name: "reaper-daw"
-displayName: "Produce music on Reaper"
-description: "Produce music on Reaper leveraging MCP servers"
+displayName: "Produce music on Linux/Unix-like using Reaper"
+description: "Produce music on Linux/Unix-like operating systems using Reaper and leveraging MCP servers"
 keywords: ["reaper", "daw", "music", "audio", "mixing", "mastering", "tracks", "fx", "effects", "eq", "compressor", "limiter"]
 author: "Héctor Zelaya"
 ---
@@ -12,7 +12,7 @@ This power enables music production workflows in Reaper DAW.
 
 ## Onboarding
 
-### Step 1: Validate Reaper Setup
+### Step 1: Validate Reaper and MCP Setup
 
 Before using Reaper MCP tools, ensure the following:
 
@@ -24,7 +24,7 @@ Before using Reaper MCP tools, ensure the following:
   - Bridge data directory: `~/.config/REAPER/Scripts/mcp_bridge_data/`
   - Verify the bridge is responding before complex operations
   
-- **Python Environment**: The MCP server requires Python
+- **MCP Python Environment**: The MCP server requires a Python environment
   - Server location: `~/Projects/reaper-mcp/reaper_mcp_server.py`
 
 ### Step 2: Understanding the Workflow
@@ -37,14 +37,14 @@ This power provides direct control over your Reaper projects through MCP tools, 
 - Adjust mix parameters (volume, pan, FX settings)
 - Monitor system resources during production
 
-## When to Load Steering Files
+## Steering Files
 
-- Working on mixing tasks (gain staging, EQ, compression, effects) → `mixing-workflow.md`
-- Creating or executing specs for Reaper projects → `spec-tasks.md`
+- **mixing-workflow** - Working on mixing tasks (gain staging, EQ, compression, effects)
+- **spec-tasks** - Creating or executing specs for Reaper projects
 
 ## Available Tools
 
-The Reaper MCP server provides **130 tools** across 11 categories for comprehensive DAW control.
+The Reaper MCP server provides **130 tools** across 11 categories for comprehensive DAW control. The MCP server requires download and configuration as described in https://github.com/TwelveTake-Studios/reaper-mcp
 
 ### Track Operations (19 tools)
 - Basic info: `get_track_count`, `get_track`, `get_all_tracks`, `get_master_track`
