@@ -1,8 +1,8 @@
 ---
-name: "reaper-daw-power"
+name: "reaper-daw"
 displayName: "Produce music on Reaper"
 description: "Produce music on Reaper leveraging MCP servers"
-keywords: ["reaper", "daw", "music", "audio", "mixing", "mastering", "production", "tracks", "fx", "effects", "eq", "compressor", "limiter"]
+keywords: ["reaper", "daw", "music", "audio", "mixing", "mastering", "tracks", "fx", "effects", "eq", "compressor", "limiter"]
 author: "Héctor Zelaya"
 ---
 
