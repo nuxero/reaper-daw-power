@@ -10,41 +10,78 @@ author: "Héctor Zelaya"
 
 This power enables music production workflows in Reaper DAW.
 
-## Onboarding
+## Overview
 
-### Step 1: Validate Reaper and MCP Setup
-
-Before using Reaper MCP tools, ensure the following:
-
-- **Reaper DAW**: Must be running and have a project open
-  - Verify Reaper is running before attempting any operations
-  - **CRITICAL**: If Reaper is not running, DO NOT proceed with MCP tool calls
-  
-- **MCP Bridge Script**: The Reaper MCP bridge must be active
-  - Bridge data directory: `~/.config/REAPER/Scripts/mcp_bridge_data/`
-  - Verify the bridge is responding before complex operations
-  
-- **MCP Python Environment**: The MCP server requires a Python environment
-  - Server location: `~/Projects/reaper-mcp/reaper_mcp_server.py`
-
-### Step 2: Understanding the Workflow
-
-This power provides direct control over your Reaper projects through MCP tools, allowing you to:
+This power provides direct control over a Reaper project through [reaper-mcp MCP tool](https://github.com/TwelveTake-Studios/reaper-mcp) by TwelveTake-Studios, allowing you to:
 
 - Manage tracks (create, rename, adjust levels)
 - Add and configure effects (EQ, compression, limiting)
 - Control routing and sends
 - Adjust mix parameters (volume, pan, FX settings)
-- Monitor system resources during production
 
-## Steering Files
+The MCP Server needs to be installed in the system.
 
-- **mixing-workflow** - Working on mixing tasks (gain staging, EQ, compression, effects)
-- **spec-tasks** - Creating or executing specs for Reaper projects
+## Spec Task Guidelines
+
+**CRITICAL**: When creating specs for Reaper DAW projects, you MUST create tool-based tasks that use MCP tools to interact with Reaper. DO NOT create coding, scripting, or software implementation tasks.
+
+### Core Principle
+
+Reaper DAW specs are about USING TOOLS to manipulate audio projects, not writing code. Every task must be executable through available MCP tool calls.
+
+### Task Creation Rules
+
+**FORBIDDEN - Never Create These:**
+- Coding tasks (writing functions, classes, modules)
+- Script development tasks (Python, Lua, ReaScript)
+- Algorithm implementation tasks
+- Software architecture tasks
+- Plugin development tasks
+- Automation script creation
+- File I/O or data processing code
+- Any task requiring writing or modifying code files
+
+**REQUIRED - Always Create These:**
+- MCP tool invocation tasks that directly control Reaper
+- Audio processing tasks using Reaper's built-in FX
+- Track manipulation tasks (create, rename, route, adjust)
+- Mix parameter adjustment tasks (volume, pan, FX settings)
+- Project state inspection tasks (get levels, list FX, check routing)
+- MIDI composition tasks (create items, add notes, edit velocities)
+- Audio editing tasks (import, split, fade, duplicate)
+- Automation tasks (create envelopes, add points)
+- Marker and region tasks (create, navigate, render)
+
+### Task Examples
+
+**✅ CORRECT Tasks (MCP Tool Usage):**
+- "Get current volume level of lead vocal track"
+- "Set track 3 volume to -8dB"
+- "Add EQ to bass track"
+- "Set EQ high-pass filter frequency to 80Hz on track 2"
+- "Create send from vocal track to reverb bus with -12dB level"
+- "Setup sidechain compression from kick to bass"
+- "Add mastering chain to master track"
+
+**❌ INCORRECT Tasks (Coding/Implementation):**
+- "Write a function to calculate optimal compression settings"
+- "Create a script to automate track naming"
+- "Implement a plugin wrapper class"
+- "Build a custom EQ algorithm"
+
+### Validation Checklist
+
+Before finalizing a spec, verify each task:
+- Uses an available MCP tool (see Available Tools section)
+- Specifies exact target (track name/number, FX, parameter)
+- Includes specific values where needed (dB, Hz, ratio, %)
+- Is action-oriented (verb + target + value)
+- Contains NO coding, scripting, or implementation work
+- Can be executed by calling MCP tools through the Reaper power
 
 ## Available Tools
 
-The Reaper MCP server provides **130 tools** across 11 categories for comprehensive DAW control. The MCP server requires download and configuration as described in https://github.com/TwelveTake-Studios/reaper-mcp
+The Reaper MCP server provides **130 tools** across 11 categories for comprehensive DAW control. 
 
 ### Track Operations (19 tools)
 - Basic info: `get_track_count`, `get_track`, `get_all_tracks`, `get_master_track`
