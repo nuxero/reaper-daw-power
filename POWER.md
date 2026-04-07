@@ -12,7 +12,7 @@ This power enables music production workflows in Reaper DAW.
 
 ## Overview
 
-This power provides direct control over a Reaper project through [reaper-mcp MCP tool](https://github.com/TwelveTake-Studios/reaper-mcp) by TwelveTake-Studios, allowing you to:
+This power provides direct control over a Reaper project through [reaper-mcp MCP tool](https://github.com/nuxero/reaper-mcp) (fork of TwelveTake-Studios), allowing you to:
 
 - Manage tracks (create, rename, adjust levels)
 - Add and configure effects (EQ, compression, limiting)
@@ -81,12 +81,13 @@ Before finalizing a spec, verify each task:
 
 ## Available Tools
 
-The Reaper MCP server provides **130 tools** across 11 categories for comprehensive DAW control. 
+The Reaper MCP server provides **134 tools** across 12 categories for comprehensive DAW control. 
 
-### Track Operations (19 tools)
+### Track Operations (21 tools)
 - Basic info: `get_track_count`, `get_track`, `get_all_tracks`, `get_master_track`
 - Track management: `insert_track`, `delete_track`, `set_track_name`
 - Levels & routing: `set_track_volume`, `set_track_pan`, `set_track_width`, `get_track_peak`
+- Metering: `get_track_peak_hold`, `clear_all_peak_indicators`
 - State control: `set_track_mute`, `set_track_solo`, `set_track_phase`, `set_track_color`
 - Folder & recording: `set_track_as_folder`, `arm_track`, `set_track_input`, `set_track_monitor`
 
@@ -96,10 +97,11 @@ The Reaper MCP server provides **130 tools** across 11 categories for comprehens
 - Parameters: `track_fx_get_num_params`, `track_fx_get_param_name`, `track_fx_get_param`, `track_fx_set_param`
 - Presets: `get_fx_presets`, `get_fx_preset`, `set_fx_preset`, `save_fx_preset`
 
-### Routing (9 tools)
+### Routing (11 tools)
 - Sends: `create_send`, `delete_send`, `set_send_volume`, `get_track_num_sends`
 - Channel routing: `set_send_dest_channels`, `set_send_source_channels`
 - Sidechain: `setup_sidechain_send`, `configure_reacomp_sidechain`, `setup_sidechain_compression`
+- Master send: `get_track_master_send`, `set_track_master_send`
 
 ### Transport (10 tools)
 - Playback: `play`, `stop`, `pause`, `record`, `get_play_state`
@@ -161,6 +163,9 @@ The Reaper MCP server provides **130 tools** across 11 categories for comprehens
 - "Create send from vocal to reverb bus"
 - "Set up sidechain compression from kick to bass"
 - "Add parallel compression to drums at -6dB"
+- "Check peak hold levels after playback for gain staging"
+- "Reset all peak indicators"
+- "Disable master send on track 2 so it only goes through the bus"
 
 ### Mastering Tasks
 - "Add limiter to master track"
